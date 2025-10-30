@@ -69,13 +69,6 @@ The traffic dataset is aggregated at a city level, not by district or street.
 Weather data may come from one station, not accounting for micro-climate variations.
 The analysis demonstrates correlation, not causation.
 
-My Project Timeline :
-Date	Task
-Oct 31	Submit project proposal
-Nov 28	Complete data collection, cleaning, and EDA with hypothesis testing
-Jan 02	Apply machine learning methods (optional regression model)
-Jan 09	Final submission (report + visuals + code)
-
 Tools and Libraries
 Python Libraries: pandas, numpy, matplotlib, statsmodels, 
 Platform:  Google Colab
