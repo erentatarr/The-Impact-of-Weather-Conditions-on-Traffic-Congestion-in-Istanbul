@@ -100,3 +100,35 @@ Platform:  Google Colab
 **Ethical Integrity**:
 All datasets are publicly available from Kaggle.
 
+
+
+**28 November Collect the data, conduct exploratory data analysis methods and hypothesis tests on the data**
+All tests were conducted at a significance level of alpha=0.05
+
+**1-Statistical Hypothesis Testing Findings:**
+
+**Main Hypothesis (Rainfall Intensity)**
+•	Hypothesis Tested: H0: Rainfall intensity has no significant effect on traffic congestion in Istanbul.
+•	Test Result: H_0 was Rejected. The One-Way ANOVA test yielded a highly significant result (F = 14.071, p=p 5.86 times 10^-9).
+•	Conclusion: Rainfall intensity is a statistically significant factor determining the level of daily traffic congestion in Istanbul.
+
+**Side Hypothesis(Asian vs European Side)**
+•	Hypothesis Tested: H_0: Rainfall intensity affects congestion equally on the Asian and European sides.
+•	Test Result: H_0 was Rejected. Separate ANOVA tests showed a highly significant effect on both : F=14.3505, p < 0.001; F=12.5162, p < 0.001$).
+•	Conclusion: While both sides are significantly affected, the magnitude of the effect is slightly stronger on the Asian Side
+
+**Additional Hypothesis (Other Weather Factors)**
+•	Hypothesis Tested: H_0: Other daily weather factors do not influence.
+•	Test Result: H_0 was rejected.
+•	Conclusion : Simple Linear Regressions showed that Temperature {tavg} and Wind Speed {wspd} each had a marginal, yet statistically significant, individual effect (p = 0.0380 and p = 0.0384.)
+	Pressure {pres} was found to be statistically non-significant ($p = 0.5916).
+
+
+ 2-**Exploratory Data Analysis (EDA)**
+
+ 2.1:
+
+
+
+
+
