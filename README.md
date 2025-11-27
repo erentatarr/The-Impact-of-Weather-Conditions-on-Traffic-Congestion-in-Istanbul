@@ -25,13 +25,28 @@ Collected from meteorological stations and forecast systems
 
  
 Research Questions:
-Does rainfall significantly increase traffic congestion in Istanbul?
-How do temperature and wind speed affect congestion levels?
-Are there seasonal or time-based patterns in the relationship between weather and traffic?
+1-Does rainfall intensity (none, light, moderate, heavy) significantly affect traffic congestion levels in Istanbul?
+
+2-Does rainfall intensity impact traffic congestion differently on the Asian and European sides of the city?
+
+3-Is the effect of rainfall intensity stronger during peak traffic hours compared to non-peak hours?
 
 Hypotheses:
-H0 (Null Hypothesis): Weather variables (rain, wind, temperature) have no significant impact on traffic congestion.
-H1 (Alternative Hypothesis): Weather variables have a statistically significant effect on traffic congestion.
+
+1-Main Hypothesis
+
+H0: Rainfall intensity has no significant effect on traffic congestion in Istanbul.
+H1: Rainfall intensity has a significant effect on traffic congestion in Istanbul.
+
+2-Side Hypothesis 1 – Asian vs European Side
+
+H0: Rainfall intensity affects traffic congestion equally on the Asian and European sides.
+H1: Rainfall intensity affects traffic congestion differently on the Asian and European sides.
+
+3-Side Hypothesis 2 – Peak vs Off-Peak Hours
+
+H0: Rainfall intensity does not influence peak-hour congestion differently from off-peak congestion.
+H1: Rainfall intensity has a stronger effect on congestion during peak traffic hours.
 
  Methodology
 1. Data Cleaning
@@ -43,31 +58,44 @@ Aggregate data to hourly averages for consistency
 Merge the two datasets using datetime
 Create derived features such as is_rainy, is_peak_hour, season, and weekday
 
-3. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+Rainfall Intensity Classification:
+Create categories based on precipitation values (e.g., none, light, moderate, heavy).
+Peak Hour Indicator:
+Generate a binary feature for morning (07:00–10:00) and evening (17:00–20:00) peak hours.
+Side-Specific Traffic Features:
+Use TI_An and TI_Av to separately analyze Asian and European side congestion.
+Weekday/Weekend Split:
+Extract day-of-week information from timestamps to assess behavioral differences.
+
+4. Exploratory Data Analysis (EDA)
 Distribution of congestion levels by day, hour, and weather type
 Correlation heatmap between weather and congestion
 Boxplots and time-series plots (rainfall vs. congestion index)
 
-4. Hypothesis Testing
+5. Hypothesis Testing
 t-test:Compare mean congestion between rainy and non-rainy periods
 ANOVA:Examine seasonal differences in traffic congestion
 Correlation: Evaluate relationships between weather metrics and traffic index
 
-5. Visualization
+6. Visualization
 Time-series plots of weather vs. congestion
 Heatmaps showing correlation strength
 Boxplots of congestion by weather conditions
 
 
 Expected Results:
-Rainfall and low temperatures are likely to correlate with higher congestion levels.
-Peak-hour congestion increases more sharply on rainy days.
-Wind and humidity may have weaker or indirect effects.
+Heavy rainfall is expected to produce noticeably higher congestion levels than light or moderate rainfall.
+Rainfall may have a stronger effect during peak traffic hours.
+The Asian and European sides may respond differently to rainfall intensity.
+Other weather variables (wind, pressure, temperature) may play secondary or moderating roles.
+
 
 Limitations:
-The traffic dataset is aggregated at a city level, not by district or street.
-Weather data may come from one station, not accounting for micro-climate variations.
-The analysis demonstrates correlation, not causation.
+Rainfall data represents city-level weather and may not capture micro-climate variations across Istanbul.
+Traffic index is aggregated by region (Asian/European) and may not reflect district-level differences.
+Observational analysis demonstrates correlation, not causation.
+Weather forecasts may not perfectly match real-time conditions.
 
 Tools and Libraries
 Python Libraries: pandas, numpy, matplotlib, statsmodels, 
