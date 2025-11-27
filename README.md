@@ -54,7 +54,6 @@ Aggregate data to hourly averages for consistency
 
 **2**. **Data Integration**
 Merge the two datasets using datetime
-Create derived features such as is_rainy, is_peak_hour, season, and weekday
 
 **3**. **Feature Engineering**
 **Rainfall Intensity Classification**:
@@ -82,9 +81,8 @@ Boxplots of congestion by weather conditions
 
 **Expected Results:**
 1-Heavy rainfall is expected to produce noticeably higher congestion levels than light or moderate rainfall.
-2-Rainfall may have a stronger effect during peak traffic hours.
-3-The Asian and European sides may respond differently to rainfall intensity.
-4-Other weather variables (wind, pressure, temperature) may play secondary or moderating roles.
+2-The Asian and European sides may respond differently to rainfall intensity.
+2-Other weather variables (wind, pressure, temperature) may play secondary or moderating roles.
 
 
 **Limitations**:
