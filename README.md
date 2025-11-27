@@ -103,7 +103,7 @@ All datasets are publicly available from Kaggle.
 
 
 **28 November Collect the data, conduct exploratory data analysis methods and hypothesis tests on the data**
-All tests were conducted at a significance level of alpha=0.05
+All tests were conducted at a significance level of alpha=0.05 in Google Colab. Google Colab file is in the ReadMe.
 
 **1-Statistical Hypothesis Testing Findings:**
 
@@ -124,10 +124,20 @@ All tests were conducted at a significance level of alpha=0.05
 	Pressure {pres} was found to be statistically non-significant ($p = 0.5916).
 
 
- 2-**Exploratory Data Analysis (EDA)**
+ 2-**Exploratory Data Analysis (EDA) Findings** (All images are in the ''EDA İmages'' file in the ReadMe).
 
- 2.1:
+ 2.1:The histogram reveals that most daily traffic index (TI) values fall between 28 and 38, showing a clear concentration around the mid-30s.The graph suggests that Istanbul’s daily traffic intensity is generally stable but occasionally experiences high-congestion outliers.
+ 2.2:The boxplot demonstrates that traffic congestion tends to increase as rainfall intensity rises.In contrast, “none” and “light” rain days have lower medians and more compact distributions, suggesting more stable and less extreme congestion levels.
+ 2.3:The boxplot highlights that the European side (TI_Av) generally experiences slightly higher traffic congestion compared to the Asian side (TI_An), as indicated by a higher median.The European side also shows a wider spread and more extreme high outliers, suggesting that congestion events are more intense and variable there.
+ 2.4:The correlation heatmap shows a very strong positive correlation between the overall traffic index (TI) and the traffic levels of the Asian and European sides, indicating consistent congestion patterns across the city.Rainfall (prcp) shows a weak positive correlation with TI, suggesting that rainfall alone does not directly drive congestion but may be one contributing factor.
+Temperature (tavg), wind speed (wspd), and pressure (pres) exhibit very weak or near-zero correlations with TI, indicating minimal linear relationships between these weather variables and traffic intensity.
 
+
+**Final Conclusion**
+The most significant result is that only precipitation intensity is consistent in predicting the daily average traffic index in Istanbul. When the effect of precipitation is not included, other daily weather factors (temperature and wind speed) remain inconsistent in providing a statistically significant prediction.
+
+**Future Work and Next Steps (02 January Deadline)**
+The initial analysis confirmed that rainfall is the primary driver of traffic congestion, while the predictive power of linear models remains low. The next phase of this project will focus on advanced Machine Learning (ML) techniques to build a more robust predictive model.
 
 
 
