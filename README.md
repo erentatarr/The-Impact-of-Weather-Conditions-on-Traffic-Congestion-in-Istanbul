@@ -25,9 +25,8 @@ Collected from meteorological stations and forecast systems
  
 **Research Questions:**
 1-Does rainfall intensity (none, light, moderate, heavy) significantly affect traffic congestion levels in Istanbul?
-
 2-Does rainfall intensity impact traffic congestion differently on the Asian and European sides of the city?
-
+3-Do other daily weather variables (temperature, wind speed, pressure) influence daily congestion levels?
 
 
 **Hypotheses:**
@@ -42,6 +41,10 @@ H1: Rainfall intensity has a significant effect on traffic congestion in Istanbu
 H0: Rainfall intensity affects traffic congestion equally on the Asian and European sides.
 H1: Rainfall intensity affects traffic congestion differently on the Asian and European sides.
 
+3-**Additional Hypothesis**:
+
+H0: Other daily weather factors (temperature, wind speed, pressure) do not influence traffic congestion.
+H1: Other daily weather factors significantly influence traffic congestion.
 
 **Methodology**
 **1**. **Data Cleaning**
