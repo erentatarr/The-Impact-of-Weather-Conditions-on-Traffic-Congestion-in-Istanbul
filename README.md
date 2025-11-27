@@ -28,7 +28,7 @@ Collected from meteorological stations and forecast systems
 
 2-Does rainfall intensity impact traffic congestion differently on the Asian and European sides of the city?
 
-3-Is the effect of rainfall intensity stronger during peak traffic hours compared to non-peak hours?
+
 
 **Hypotheses:**
 
@@ -42,10 +42,6 @@ H1: Rainfall intensity has a significant effect on traffic congestion in Istanbu
 H0: Rainfall intensity affects traffic congestion equally on the Asian and European sides.
 H1: Rainfall intensity affects traffic congestion differently on the Asian and European sides.
 
-**3-Side Hypothesis 2 – Peak vs Off-Peak Hours**
-
-H0: Rainfall intensity does not influence peak-hour congestion differently from off-peak congestion.
-H1: Rainfall intensity has a stronger effect on congestion during peak traffic hours.
 
 **Methodology**
 **1**. **Data Cleaning**
@@ -60,8 +56,6 @@ Create derived features such as is_rainy, is_peak_hour, season, and weekday
 **3**. **Feature Engineering**
 **Rainfall Intensity Classification**:
 Create categories based on precipitation values (e.g., none, light, moderate, heavy).
-**Peak Hour Indicator**:
-Generate a binary feature for morning (07:00–10:00) and evening (17:00–20:00) peak hours.
 **Side-Specific Traffic Features:**
 Use TI_An and TI_Av to separately analyze Asian and European side congestion.
 **Weekday/Weekend Split**:
