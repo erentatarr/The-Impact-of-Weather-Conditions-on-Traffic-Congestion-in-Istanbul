@@ -108,114 +108,89 @@ All datasets are publicly available from Kaggle.
 
 
 
-## 28 November – Data Collection, EDA, and Hypothesis Testing
+**28 November – Data Collection, EDA, and Hypothesis Testing**
 
-All statistical analyses were conducted at a significance level of  
-**α = 0.05** using **Google Colab**.  
+All statistical analyses were conducted at a significance level of
+α = 0.05 using Google Colab.
 The complete Google Colab notebook is provided in the repository.
 
-
-
-## 1. Statistical Hypothesis Testing Findings
-
-### 1.1 Main Hypothesis (Rainfall Intensity)
-
-**Hypothesis Tested:**  
-H₀: Rainfall intensity has no significant effect on traffic congestion in Istanbul.
-
-**Test Result:**  
-H₀ was rejected. A one-way ANOVA test yielded a highly significant result  
-(F = 14.071, p = 5.86 × 10⁻⁹).
-
-**Conclusion:**  
-Rainfall intensity is a statistically significant factor influencing daily traffic congestion levels in Istanbul.
-
-
-
-### 1.2 Side Hypothesis (Asian vs. European Side)
-
-**Hypothesis Tested:**  
-H₀: Rainfall intensity affects traffic congestion equally on the Asian and European sides of Istanbul.
-
-**Test Result:**  
-H₀ was rejected. Separate ANOVA tests indicated statistically significant effects on both sides:  
-- Asian Side: F = 14.3505, p < 0.001  
-- European Side: F = 12.5162, p < 0.001  
-
-**Conclusion:**  
-While rainfall intensity significantly affects traffic congestion on both sides, the results suggest that the magnitude of this effect may differ slightly between the Asian and European sides.
-
-
-
-### 1.3 Additional Hypotheses (Other Weather Factors)
-
-**Hypothesis Tested:**  
-H₀: Other daily weather variables do not influence traffic congestion.
-
-**Test Result:**  
-H₀ was partially rejected.
-
-**Conclusion:**  
-Simple linear regression analyses indicated that average temperature (tavg) and wind speed (wspd) exhibit marginal but statistically significant relationships with traffic congestion  
-(p = 0.0380 and p = 0.0384, respectively).  
-Atmospheric pressure (pres) was found to be statistically non-significant (p = 0.5916).  
-However, the explanatory power of these linear models remains limited.
-
-
-
-## 2. Data Processing
+**1. Data Processing**
 
 In this project, traffic data is provided with timestamp information at a minute-level resolution, while weather data is available at a daily level.
 
-To ensure temporal consistency between the two datasets, traffic data was aggregated to a daily level. The datetime column of the traffic dataset was defined as a time index, and daily resampling was performed using the `resample('D')` function from the Pandas library. For each day, the arithmetic mean of minute-based traffic index (TI) values was calculated using the `mean()` function.
+To ensure temporal consistency between the two datasets, traffic data was aggregated to a daily level. The datetime column of the traffic dataset was defined as a time index, and daily resampling was performed using the resample('D') function from the Pandas library. For each day, the arithmetic mean of minute-based traffic index (TI) values was calculated using the mean() function.
 
 As a result, minute-level traffic measurements were transformed into a single daily average traffic index value. The aggregated daily traffic data was then merged with the daily weather dataset based on date, and all subsequent statistical analyses were conducted using this combined daily-level dataset.
 
+**2. Exploratory Data Analysis (EDA) Findings**
 
-
-## 3. Exploratory Data Analysis (EDA) Findings
-
-### 3.1 Distribution of Daily Traffic Index
+**2.1 Distribution of Daily Traffic Index**
 
 The histogram reveals that most daily traffic index (TI) values fall between 28 and 38, showing a clear concentration around the mid-30s. This suggests that Istanbul’s daily traffic intensity is generally stable, with occasional high-congestion outliers.
 
-
-
-### 3.2 Traffic Index by Rainfall Intensity
+**2.2 Traffic Index by Rainfall Intensity**
 
 The boxplot demonstrates that traffic congestion tends to increase as rainfall intensity rises. In contrast, “none” and “light” rain days exhibit lower medians and more compact distributions, indicating more stable congestion patterns.
 
-
-
-### 3.3 Asian vs. European Side Traffic Comparison
+**2.3 Asian vs. European Side Traffic Comparison**
 
 The boxplot highlights that the European side (TI_Av) generally experiences slightly higher traffic congestion compared to the Asian side (TI_An). The European side also shows greater variability and more extreme congestion values.
 
+**2.4 Correlation Analysis Between Traffic and Weather Variables**
 
-
-### 3.4 Correlation Analysis Between Traffic and Weather Variables
-
-The correlation heatmap shows a very strong positive correlation between the overall traffic index (TI) and the traffic indices of the Asian and European sides, indicating consistent city-wide congestion patterns.  
+The correlation heatmap shows a very strong positive correlation between the overall traffic index (TI) and the traffic indices of the Asian and European sides, indicating consistent city-wide congestion patterns.
 Rainfall (prcp) displays a weak positive linear correlation with TI, while temperature (tavg), wind speed (wspd), and pressure (pres) show weak or near-zero linear correlations.
 
+**2.5 Interpretation of Correlation Results**
 
+This correlation matrix confirms the same overall pattern observed in Figure 2.4. While rainfall shows only a weak linear correlation with traffic congestion, hypothesis testing results indicate that rainfall intensity plays a statistically significant role, suggesting a non-linear or threshold-based relationship.
 
-### 3.5 Interpretation of Correlation Results
+**3. Statistical Hypothesis Testing Findings**
 
-This correlation matrix confirms the same overall pattern observed in Figure 3.4. While rainfall shows only a weak linear correlation with traffic congestion, hypothesis testing results indicate that rainfall intensity plays a statistically significant role, suggesting a non-linear or threshold-based relationship.
+**3.1 Main Hypothesis (Rainfall Intensity)**
 
+Hypothesis Tested:
+H₀: Rainfall intensity has no significant effect on traffic congestion in Istanbul.
 
+Test Result:
+H₀ was rejected. A one-way ANOVA test yielded a highly significant result
+(F = 14.071, p = 5.86 × 10⁻⁹).
 
-## Final Conclusion
+Conclusion:
+Rainfall intensity is a statistically significant factor influencing daily traffic congestion levels in Istanbul.
+
+**3.2 Side Hypothesis (Asian vs. European Side)**
+
+Hypothesis Tested:
+H₀: Rainfall intensity affects traffic congestion equally on the Asian and European sides of Istanbul.
+
+Test Result:
+H₀ was rejected. Separate ANOVA tests indicated statistically significant effects on both sides:
+
+Asian Side: F = 14.3505, p < 0.001
+European Side: F = 12.5162, p < 0.001
+
+Conclusion:
+While rainfall intensity significantly affects traffic congestion on both sides, the results suggest that the magnitude of this effect may differ slightly between the Asian and European sides.
+
+**3.3 Additional Hypotheses (Other Weather Factors)**
+
+Hypothesis Tested:
+H₀: Other daily weather variables do not influence traffic congestion.
+
+Test Result:
+H₀ was partially rejected.
+
+Conclusion:
+Simple linear regression analyses indicated that average temperature (tavg) and wind speed (wspd) exhibit marginal but statistically significant relationships with traffic congestion
+(p = 0.0380 and p = 0.0384, respectively).
+Atmospheric pressure (pres) was found to be statistically non-significant (p = 0.5916).
+However, the explanatory power of these linear models remains limited.
+
+**Final Conclusion**
 
 The analysis demonstrates that precipitation intensity is the most robust and consistent factor associated with daily traffic congestion in Istanbul. Although temperature and wind speed show marginal statistical significance in isolation, their overall explanatory power remains limited. These findings suggest that the effect of weather on traffic congestion is primarily driven by rainfall and is not fully captured by simple linear relationships.
 
-
-
-## Future Work and Next Steps (02 January Deadline)
+**Future Work and Next Steps (02 January Deadline)**
 
 Building on these findings, the next phase of the project will focus on applying more advanced machine learning techniques to better capture non-linear relationships and improve the predictive performance of traffic congestion models.
-
-
-
-
