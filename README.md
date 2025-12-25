@@ -18,10 +18,12 @@ Measures overall city-level traffic intensity
 2-**Istanbul Weather Forecast Logs 2020–2025**: https://www.kaggle.com/datasets/msacar/istanbul-weather-forecast-logs-dataset-2020-25  : This dataset serves as enrichment data, allowing the analysis of how weather variations influence the traffic index. Both datasets will be merged using the datetime field.
 
 **Important Note Regarding the Use of Weather Data:**
+The weather data used in this study was obtained from a forecasting system and consists of forecast outputs generated for dates between 2020 and 2025. Therefore,
+weather variables represent predicted conditions from the past rather than actual meteorological measurements.
 
-Although the dataset is named "Istanbul Weather Forecast Logs," the data used in this project consists of daily weather records from past dates. The analysis is entirely retrospective, focusing on examining past traffic density along with past weather conditions on the same dates.
+This dataset was chosen due to its time span, data regularity, and direct availability for all dates matching traffic data. The aim of this project is not to evaluate forecast accuracy, but to examine the statistical relationships between traffic density and available weather information. Consequently, the analysis maintains its validity regarding the use of forecast-based weather inputs.
 
-No future or predictive weather forecasts were used in this study. Weather records were treated as actual daily meteorological observations and combined with traffic data according to matching dates.
+
 
 **Istanbul Weather Forecast Logs 2020–2025 Content:**
 Daily and hourly weather data from Istanbul (2020–2025)
@@ -56,7 +58,7 @@ H1: Other daily weather factors significantly influence traffic congestion.
 **1**. **Data Cleaning**
 Converting  date and time fields to datetime format
 Handle missing or duplicated values
-Aggregate data to hourly averages for consistency
+Aggregate data to daily averages for consistency
 
 **2**. **Data Integration**
 Merge the two datasets using datetime
