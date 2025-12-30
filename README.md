@@ -215,5 +215,13 @@ Building on these findings, the next phase of the project will focus on applying
 
 **8. Model Comparison and Interpretation**: The performance of the implemented models was evaluated using RMSE and R² metrics. The results show that weather-related variables exhibit a consistent relationship with traffic congestion, but their predictive capacity alone remains limited. Precipitation emerged as the most correlated weather variable with traffic congestion. Overall, these findings confirm that model performance is influenced not only by the chosen methodology but also by the level of detail and information richness of the feature set.The  quantitative evaluation and model comparison are provided in the[Result Summary – Machine Learning Results](./Result_Summary.docx) file.
 
+### Quick Results of Machine Learning (02 January)
+
+- Dataset: 856 daily observations (180 dropped due to missing values)
+- Models tested: Linear Regression, Decision Tree, Random Forest
+- Best RMSE: ~7.08 (Linear Regression)
+- R²: Negative for all models → limited predictive power of weather-only features
+- Key insight: Weather affects traffic, but explanatory power is weak without contextual variables
+
 
 **9. Overall Evaluation** : The machine learning analysis yielded outcomes that were in line with the exploratory data analysis and hypothesis tests done at the beginning of the project.Although weather conditions do influence traffic density, accurately predicting complex urban systems such as traffic congestion requires incorporating additional contextual and behavioral factors beyond meteorological variables.This phase provides a transparent and methodologically sound evaluation of the role of weather conditions in explaining traffic congestion, reinforcing the conclusions drawn throughout the project.
