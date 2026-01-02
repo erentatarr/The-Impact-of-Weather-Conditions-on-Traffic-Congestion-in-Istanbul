@@ -225,6 +225,10 @@ The Decision Tree model, applied to capture possible nonlinear relationships, fa
 
 Overall, the results show that weather conditions have a certain relationship with traffic density, with precipitation showing a more significant effect compared to other meteorological factors. However, it is not possible to predict complex urban systems such as traffic congestion with high accuracy using only weather variables. Traffic density is shaped by the combined effect of numerous contextual variables such as human behavior, time factors, infrastructure conditions, and emergencies.
 
-Therefore, the findings clearly demonstrate that model performance is directly dependent not only on the algorithm used but also on the information richness of the feature set.
+**9. Overall Evaluation** 
 
-**9. Overall Evaluation** : The machine learning analysis yielded outcomes that were in line with the exploratory data analysis and hypothesis tests done at the beginning of the project.Although weather conditions do influence traffic density, accurately predicting complex urban systems such as traffic congestion requires incorporating additional contextual and behavioral factors beyond meteorological variables.This phase provides a transparent and methodologically sound evaluation of the role of weather conditions in explaining traffic congestion, reinforcing the conclusions drawn throughout the project.
+The findings from the machine learning analysis are consistent with results obtained in earlier phases of the project. Although some weather variables—particularly precipitation—showed significant correlations with traffic congestion, their explanatory power remains limited when taken alone.
+
+The negative R² values ​​observed in all models reveal that traffic congestion cannot be reliably predicted using only meteorological factors. This indicates that traffic congestion is a multidimensional urban phenomenon and is influenced by other factors such as human behavior and infrastructural conditions.
+
+In conclusion, this phase methodologically evaluates the role of weather conditions in explaining traffic congestion. The results reinforce the project's main conclusion: weather conditions should be considered a complementary factor rather than a primary determinant of traffic congestion; models enriched with contextual variables are needed for higher prediction accuracy.
