@@ -215,13 +215,16 @@ Building on these findings, the next phase of the project will focus on applying
 
 **8. Model Comparison and Interpretation**: The performance of the implemented models was evaluated using RMSE and R² metrics. The results show that weather-related variables exhibit a consistent relationship with traffic congestion, but their predictive capacity alone remains limited. Precipitation emerged as the most correlated weather variable with traffic congestion. Overall, these findings confirm that model performance is influenced not only by the chosen methodology but also by the level of detail and information richness of the feature set.The  quantitative evaluation and model comparison are provided in the[Result Summary – Machine Learning Results](./Result_Summary.docx) file.
 
-### Quick Results of Machine Learning (02 January)
+### Results of Machine Learning (02 January)
 
-- Dataset: 856 daily observations (180 dropped due to missing values)
-- Models tested: Linear Regression, Decision Tree, Random Forest
-- Best RMSE: ~7.08 (Linear Regression)
-- R²: Negative for all models → limited predictive power of weather-only features
-- Key insight: Weather affects traffic, but explanatory power is weak without contextual variables
+The machine learning evaluation was performed on the final dataset consisting of 856 days of observations obtained after removing missing observations. All models were cleaned and tested to ensure comparability. Three different approaches were used in this phase: Linear Regression, Decision Tree Regressor, and Random Forest Regressor.
 
+The Linear Regression model achieved the lowest RMSE (≈ 7.08) among the tested models. However, the negative R² values ​​for all models indicate that weather-based features are insufficient to explain the variation in traffic density. This reveals that the models did not perform better than a simple mean estimation.
+
+The Decision Tree model, applied to capture possible nonlinear relationships, failed to generalize to the test data due to overfitting the training data. The Random Forest model partially mitigated this overfitting problem, producing more balanced results; however, it did not provide a significant performance improvement compared to the Linear Regression model with the current feature set.
+
+Overall, the results show that weather conditions have a certain relationship with traffic density, with precipitation showing a more significant effect compared to other meteorological factors. However, it is not possible to predict complex urban systems such as traffic congestion with high accuracy using only weather variables. Traffic density is shaped by the combined effect of numerous contextual variables such as human behavior, time factors, infrastructure conditions, and emergencies.
+
+Therefore, the findings clearly demonstrate that model performance is directly dependent not only on the algorithm used but also on the information richness of the feature set.
 
 **9. Overall Evaluation** : The machine learning analysis yielded outcomes that were in line with the exploratory data analysis and hypothesis tests done at the beginning of the project.Although weather conditions do influence traffic density, accurately predicting complex urban systems such as traffic congestion requires incorporating additional contextual and behavioral factors beyond meteorological variables.This phase provides a transparent and methodologically sound evaluation of the role of weather conditions in explaining traffic congestion, reinforcing the conclusions drawn throughout the project.
