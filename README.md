@@ -213,7 +213,7 @@ Building on these findings, the next phase of the project will focus on applying
 
 **7. Ensemble Model – Random Forest Regressor** :To mitigate the overfitting problem observed in the Decision Tree model, the Random Forest Regressor was applied. By aggregating the predictions of multiple decision trees, this ensemble method produced more stable and balanced results. The Random Forest model achieved an RMSE of approximately 7.12, demonstrating improved stability compared to the Decision Tree model; however, it did not yield a substantial performance improvement over the Linear Regression baseline given the current feature set. 
 
-**8. Model Comparison and Interpretation**: The performance of the implemented models was evaluated using RMSE and R² metrics. The results show that weather-related variables exhibit a consistent relationship with traffic congestion; however, their predictive capacity alone remains limited. Precipitation emerged as the weather variable with the highest correlation to traffic congestion. These findings confirm that model performance is influenced not only by the chosen methodology but also by the richness of the feature set. Quantitative evaluation and model comparison are presented in the Results Summary – Machine Learning Results file.The  quantitative evaluation and model comparison are provided in the [Result Summary – Machine Learning Results](./Result_Summary.docx) file.
+**8. Model Comparison and Interpretation**: The performance of the implemented models was evaluated using RMSE and R² metrics. The results show that weather-related variables exhibit a consistent relationship with traffic congestion; however, their predictive capacity alone remains limited. Precipitation emerged as the weather variable with the highest correlation to traffic congestion. These findings confirm that model performance is influenced not only by the chosen methodology but also by the richness of the feature set. The  quantitative evaluation and model comparison are provided in the [Result Summary – Machine Learning Results](./Result_Summary.docx) file.
 
 ### Results of Machine Learning (02 January)
 
@@ -227,7 +227,7 @@ Overall, the results show that weather conditions have a certain relationship wi
 
 **9. Overall Evaluation** 
 
-The findings from the machine learning analysis are consistent with results obtained in earlier phases of the project. Although some weather variables—particularly precipitation—showed significant correlations with traffic congestion, their explanatory power remains limited when taken alone.
+The findings from the machine learning analysis are consistent with results obtained in earlier phases of the project. Although some weather variables (particularly precipitation) showed significant correlations with traffic congestion, their explanatory power remains limited when taken alone.
 
 The negative R² values ​​observed in all models reveal that traffic congestion cannot be reliably predicted using only meteorological factors. This indicates that traffic congestion is a multidimensional urban phenomenon and is influenced by other factors such as human behavior and infrastructural conditions.
 
